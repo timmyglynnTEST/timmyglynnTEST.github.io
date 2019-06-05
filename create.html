@@ -1,11 +1,11 @@
-<?php require_once 'includes/header.php'; 
-	require_once 'classes/entry.php';
+<?php require_once 'includes/header.html'; 
+	require_once 'classes/entry.html';
 	if (isset($_POST['publishing'])) {
 		$entry = new Entry();
 		$entry->createNewFromPOST($_POST);
 		$entry->SqlInsertEntry();
 ?>
-	<a href="editor.php?entry_id=<?php echo $entry->getId(); ?>">View Entry</a>
+	<a href="editor.html?entry_id=<?php echo $entry->getId(); ?>">View Entry</a>
 <?php
 }
 	?>
@@ -26,7 +26,7 @@
 									</div>
 								</header>
 								<div id="create_form">
-									<form action="create.php" method="POST">
+									<form action="create.html" method="POST">
 
 									<label for="">Title</label>
 									<input type="text" name="entry_title" id="title" />
@@ -61,4 +61,4 @@
 
 					</div>
 					
-	<?php require_once 'includes/footer.php'; ?>
+	<?php require_once 'includes/footer.html'; ?>

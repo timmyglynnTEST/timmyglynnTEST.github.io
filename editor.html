@@ -1,10 +1,10 @@
-<?php require_once 'includes/header.php'; 
+<?php require_once 'includes/header.html'; 
 	
 	if (!isset($_GET['entry_id'])) {
-		header('location:index.php');
+		header('location:index.html');
 	}
     
-    require_once 'classes/entry.php';
+    require_once 'classes/entry.html';
     
     $entry = new Entry();
 	$entry->SqlSelectEntryById($_GET['entry_id']);
@@ -48,4 +48,4 @@
 
 </div>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.html'; ?>
