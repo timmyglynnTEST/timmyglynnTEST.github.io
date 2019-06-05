@@ -1,14 +1,14 @@
 
 <?php
-require_once 'includes/header.php'; 
-require_once 'classes/entry.php';
+require_once 'includes/header.html'; 
+require_once 'classes/entry.html';
 ?>
 
 	<!-- Main -->
 		<div id="main">
 
         					<section id="intro">
-								<a href="create.php" class="logo"><img src="images/logo.jpg" alt=""></a>
+								<a href="create.html" class="logo"><img src="images/logo.jpg" alt=""></a>
 								<header>
 									<h2>M.E.P. Social Health</h2>
 									<p>The road to a well balanced mental, emotional, and physical life </p>
@@ -20,7 +20,7 @@ require_once 'classes/entry.php';
 
 <?php 
             $query = 'SELECT * FROM entries ORDER BY entry_id DESC LIMIT 7;';
-            require_once('classes/dbh.php');
+            require_once('classes/dbh.html');
             $dbh = new Dbh();
             $rows = $dbh->executeSelect($query);
             //print_r($rows);
@@ -66,7 +66,7 @@ require_once 'classes/entry.php';
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="editor.php?entry_id=<?php echo $entry->getId(); ?>"><?php echo $entry->getTitle(); ?></a></h2>
+										<h2><a href="editor.html?entry_id=<?php echo $entry->getId(); ?>"><?php echo $entry->getTitle(); ?></a></h2>
 										<p><?php echo $entry->getExcerpt(); ?></p>
 									</div>
 									<div class="meta">
@@ -88,7 +88,7 @@ require_once 'classes/entry.php';
 								<p></p>
 								<footer>
 									<ul class="actions">
-										<li><a href="editor.php?entry_id=<?php echo $entry->getId(); ?>" class="button big">Continue Reading</a></li>
+										<li><a href="editor.html?entry_id=<?php echo $entry->getId(); ?>" class="button big">Continue Reading</a></li>
 									</ul>
 									<ul class="stats">
 										<!--<li><a href="#">General</a></li>
@@ -132,7 +132,7 @@ require_once 'classes/entry.php';
 												
 <?php 
             $query = 'SELECT * FROM entries ORDER BY entry_id DESC LIMIT 7;';
-            require_once('classes/dbh.php');
+            require_once('classes/dbh.html');
             $dbh = new Dbh();
             $rows = $dbh->executeSelect($query);
             //print_r($rows);
